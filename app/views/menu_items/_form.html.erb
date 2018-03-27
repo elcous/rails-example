@@ -11,6 +11,31 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :menu_item_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inventory %>
+    <%= form.number_field :inventory, id: :menu_item_inventory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :menu_item_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :menu_item_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :menu_item_description %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

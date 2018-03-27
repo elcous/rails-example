@@ -17,7 +17,7 @@ class MenuItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create menu_item" do
     assert_difference('MenuItem.count') do
-      post menu_items_url, params: { menu_item: {  } }
+      post menu_items_url, params: { menu_item: { description: @menu_item.description, image: @menu_item.image, inventory: @menu_item.inventory, price: @menu_item.price, title: @menu_item.title } }
     end
 
     assert_redirected_to menu_item_url(MenuItem.last)
@@ -34,7 +34,7 @@ class MenuItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update menu_item" do
-    patch menu_item_url(@menu_item), params: { menu_item: {  } }
+    patch menu_item_url(@menu_item), params: { menu_item: { description: @menu_item.description, image: @menu_item.image, inventory: @menu_item.inventory, price: @menu_item.price, title: @menu_item.title } }
     assert_redirected_to menu_item_url(@menu_item)
   end
 
