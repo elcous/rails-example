@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
+<%= render "shared/flash" %>
 
 <h1>Menu Items</h1>
+
 
 <table>
   <thead>
@@ -32,4 +33,6 @@
 
 <br>
 
-<%= link_to 'New Menu Item', new_menu_item_path %>
+<div class="btn btn-primary">
+  <%= link_to 'New Menu Item', new_menu_item_path, :class => "btn-primary" %>
+</div>
