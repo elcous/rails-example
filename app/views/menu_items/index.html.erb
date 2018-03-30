@@ -1,9 +1,19 @@
 <%= render "shared/flash" %>
 
-<h1>Menu Items</h1>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Menu</h4>
+  </div>
+  <div class="col-md-6">
+    <div class="btn btn-primary float-right">
+      <%= link_to 'New Menu Item', new_menu_item_path, :class => "btn-primary" %>
+    </div>
+  </div>
+</div>
 
+<div class="row m3">&nbsp;</div>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -11,6 +21,7 @@
       <th>Price</th>
       <th>Image</th>
       <th>Description</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,6 +34,7 @@
         <td><%= menu_item.price %></td>
         <td><%= menu_item.image %></td>
         <td><%= menu_item.description %></td>
+        <td><%= menu_item.category.name if  menu_item.category.present? %></td>
         <td><%= link_to 'Show', menu_item %></td>
         <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
         <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,6 +45,4 @@
 
 <br>
 
-<div class="btn btn-primary">
-  <%= link_to 'New Menu Item', new_menu_item_path, :class => "btn-primary" %>
-</div>
+
